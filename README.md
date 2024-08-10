@@ -19,8 +19,6 @@ s
 
 https://www.alvar.dev/blog/creating-devtools-for-react-server-components
 
-s
-
 👉 Next.js Image Component Tutorial (Going even more deep into the <Image /> component than we do in the course)
 
 https://www.fullstackfoundations.com/blog/nextjs-image-component-tutorial
