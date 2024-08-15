@@ -48,3 +48,7 @@ https://react.dev/reference/rsc/server-components
 👉 Auth.js documentation
 
 https://authjs.dev/getting-started
+
+## Git Large File Storage
+
+https://git-lfs.com/
