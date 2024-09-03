@@ -2,7 +2,7 @@ const { readFileSync } = require("fs");
 const { createServer } = require("http");
 const { parse } = require("url");
 const { renderToString } = require("react-dom/server");
-import React from "react";
+const React = require("react");
 
 const pizzas = [
   {
@@ -63,8 +63,8 @@ function MenuItem({ pizza }) {
     </li>
   );
 }
-
 const htmlTemplate = readFileSync(`${__dirname}/index.html`, "utf-8");
+const clientJs = readFileSync(`${__dirname}/client.js`, "utf-8");
 
 const server = createServer((req, res) => {
   const pathName = parse(req.url, true).pathname;
@@ -75,8 +75,9 @@ const server = createServer((req, res) => {
 
     res.writeHead(200, { "Content-type": "text/html" });
     res.end(html);
-  } else if (pathName === "/test") {
-    res.end("TEST");
+  } else if (pathName === "/client.js") {
+    res.writeHead(200, { "Content-type": "application/javascript" });
+    res.end(clientJs);
   } else {
     res.end("The URl cannot be found");
   }
