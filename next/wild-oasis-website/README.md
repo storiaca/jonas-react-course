@@ -4,6 +4,10 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 
 https://authjs.dev/
 
+## Generate secret
+
+https://generate-secret.vercel.app/
+
 ## Getting Started
 
 First, run the development server:
