@@ -20,4 +20,9 @@ export const {
       // },
     }),
   ],
+  callbacks: {
+    authorized({ auth, request }) {
+      return !!auth?.user;
+    },
+  },
 });
