@@ -1,7 +1,10 @@
 "use server";
 
-import { redirect } from "next/dist/server/api-utils";
 import { signIn, signOut } from "./auth";
+
+export async function updateGuest(formData) {
+  console.log(formData);
+}
 
 export async function signInAction() {
   await signIn("google", { redirectTo: "/account" });
