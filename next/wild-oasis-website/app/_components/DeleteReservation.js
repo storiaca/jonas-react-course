@@ -3,7 +3,8 @@
 import { useTransition } from "react";
 import { TrashIcon } from "@heroicons/react/24/solid";
 import { deleteReservation } from "../_lib/actions";
-import Loading from "../loading";
+
+import SpinnerMini from "./SpinnerMini";
 
 function DeleteReservation({ bookingId }) {
   const [isPending, startTransition] = useTransition();
@@ -25,7 +26,7 @@ function DeleteReservation({ bookingId }) {
         </>
       ) : (
         <span className="mx-auto">
-          <Loading />
+          <SpinnerMini />
         </span>
       )}
     </button>
