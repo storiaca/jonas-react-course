@@ -9,6 +9,8 @@ export const formatDistanceFromNow = (dateStr) =>
     addSuffix: true,
   }).replace("about ", "");
 
+// Implement useOptimistic hook
+
 function ReservationCard({ booking }) {
   const {
     id,
