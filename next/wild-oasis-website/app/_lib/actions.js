@@ -41,7 +41,11 @@ export async function updateGuest(formData) {
   // console.log(`Is "${testID}" a valid National ID?`, validateNationalID(testID))
 }
 
-export async function deleteReservation(bookingId) {
+export async function createBooking(formData) {
+  console.log(formData);
+}
+
+export async function deleteBooking(bookingId) {
   const session = await auth();
 
   if (!session) throw new Error("You must be logged in");
