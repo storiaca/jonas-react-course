@@ -41,7 +41,7 @@ export async function updateGuest(formData) {
   // console.log(`Is "${testID}" a valid National ID?`, validateNationalID(testID))
 }
 
-export async function createBooking(formData) {
+export async function createBooking(bookingData, formData) {
   console.log(formData);
 }
 
