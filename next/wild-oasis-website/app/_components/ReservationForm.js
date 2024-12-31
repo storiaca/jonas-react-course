@@ -16,6 +16,7 @@ function ReservationForm({ cabin, user }) {
   const cabinPrice = numNights * (regularPrice - discount);
 
   const bookingData = {
+    created_at: new Date().toJSON(),
     startDate,
     endDate,
     numNights,

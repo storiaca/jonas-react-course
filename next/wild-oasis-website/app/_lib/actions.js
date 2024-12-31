@@ -55,10 +55,16 @@ export async function createBooking(bookingData, formData) {
     totalPrice: bookingData.cabinPrice * bookingData.numNights,
     isPaid: false,
     hasBreakfast: false,
-    staus: "uncofirmed",
+    status: "uncofirmed",
   };
 
   console.log(newBooking);
+
+  const { error } = await supabase.from("bookings").insert([newBooking]);
+
+  if (error) {
+    throw new Error("Booking could not be created");
+  }
 }
 
 export async function deleteBooking(bookingId) {
